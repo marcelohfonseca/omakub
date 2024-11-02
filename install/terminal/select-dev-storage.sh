@@ -18,6 +18,12 @@ if [[ -n "$dbs" ]]; then
 		PostgreSQL)
 			sudo docker run -d --restart unless-stopped -p "127.0.0.1:5432:5432" --name=postgres16 -e POSTGRES_HOST_AUTH_METHOD=trust postgres:16
 			;;
+		SQLServer)
+			docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" \
+			-p 1433:1433 --name mssql --hostname mssql \
+			-d \
+			mcr.microsoft.com/mssql/server:2022-latest
+			;;
 		esac
 	done
 fi
