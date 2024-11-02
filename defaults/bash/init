@@ -1,9 +1,9 @@
 if command -v mise &> /dev/null; then
-  eval "$(mise activate bash)"
+  eval "$(mise activate $OMAKUB_SHELL)"
 fi
 
 if command -v zoxide &> /dev/null; then
-  eval "$(zoxide init bash)"
+  eval "$(zoxide init $OMAKUB_SHELL)"
 fi
 
 if command -v fzf &> /dev/null; then
