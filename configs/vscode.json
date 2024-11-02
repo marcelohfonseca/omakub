@@ -1,26 +1,75 @@
 {
-  "editor.fontFamily": "CaskaydiaMono Nerd Font",
-  "editor.tabSize": 2,
-  "security.workspace.trust.untrustedFiles": "open",
+  // default profile
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.editor.labelFormat": "short",
+  "workbench.iconTheme": "symbols",
+  "symbols.hidesExplorerArrows": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "breadcrumbs.enabled": false,
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 3,
+  "editor.cursorBlinking": "smooth",
+  "editor.fontFamily": "'CaskaydiaMono Nerd Font', monospace",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  "editor.formatOnPaste": true,
+  "editor.fontWeight": 300,
+  "editor.letterSpacing": 0.1,
+  "editor.lineHeight": 20,
+  "editor.lineNumbers": "on",
   "editor.minimap.enabled": false,
-  "git.ignoreMissingGitWarning": true,
-  "editor.fontSize": 12,
-  "editor.occurrencesHighlight": "off",
-  "editor.selectionHighlight": false,
-  "editor.suggestOnTriggerCharacters": false,
-  "editor.tabCompletion": "on",
-  "editor.quickSuggestions": {
-    "other": false,
-    "comments": false,
-    "strings": false
-  },
-  "files.trimTrailingWhitespace": true,
-  "git.confirmSync": false,
-  "window.menuBarVisibility": "compact",
-  "git.autofetch": true,
-  "git.openRepositoryInParentFolders": "always",
+  "editor.rulers": [
+    80,
+    120
+  ],
+  "editor.renderLineHighlight": "gutter",
+  "editor.semanticHighlighting.enabled": false,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "visible",
+  "editor.tabSize": 4,
+  "editor.wordWrap": "on",
+  "explorer.compactFolders": false,
+  "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "extensions.ignoreRecommendations": true,
-  "workbench.colorTheme": "Tokyo Night",
-  "window.titleBarStyle": "custom"
+  "security.workspace.trust.untrustedFiles": "open",
+  "window.commandCenter": false,
+  "workbench.activityBar.location": "hidden", // control+q -> quickOpenView
+  "workbench.editor.splitInGroupLayout": "vertical",
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.layoutControl.enabled": false,
+  "workbench.statusBar.visible": true,
+  "workbench.tree.indent": 18,
+  // terminal settings
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    }
+  },
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.profiles.linux": {
+    "zsh": {
+      "path": "zsh"
+    }
+  },
+  // other settings
+  "files.associations": {
+    ".env": "plaintext"
+  },
+  "files.exclude": {
+    "**/__pycache__": true
+  },
+  "files.insertFinalNewline": true,
+  "git.openRepositoryInParentFolders": "never",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true
+  },
+  "jupyter.interactiveWindow.textEditor.executeSelection": true,
+  "notebook.cellToolbarVisibility": "hover",
+  "notebook.lineNumbers": "on",
 }
