@@ -1,0 +1,13 @@
+# Source oh-my-zsh if it exists
+if [[ -e ~/.oh-my-zsh/oh-my-zsh.sh ]]; then
+  source ~/.oh-my-zsh/oh-my-zsh.sh
+fi
+
+# Source omakub defaults
+if [[ -e ~/.local/share/omakub/defaults/zsh/rc ]]; then
+  source ~/.local/share/omakub/defaults/zsh/rc
+fi
+
+# Editor used by CLI
+export EDITOR="nvim"
+export SUDO_EDITOR="$EDITOR"
