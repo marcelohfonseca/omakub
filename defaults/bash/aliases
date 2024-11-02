@@ -1,4 +1,10 @@
+# Update system
+alias up='sudo apt update -y && sudo apt upgrade -y'
+alias update='sudo apt update'
+alias upgrade='sudo apt upgrade'
+
 # File system
+alias cls='clear'
 alias ls='eza -lh --group-directories-first --icons'
 alias lsa='ls -a'
 alias lt='eza --tree --level=2 --long --icons --git'
@@ -11,12 +17,12 @@ alias cd='z'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias dev="cd ~/dev/"
 
 # Tools
 alias n='nvim'
 alias g='git'
 alias d='docker'
-alias r='rails'
 alias bat='batcat'
 alias lzg='lazygit'
 alias lzd='lazydocker'
@@ -25,6 +31,26 @@ alias lzd='lazydocker'
 alias gcm='git commit -m'
 alias gcam='git commit -a -m'
 alias gcad='git commit -a --amend'
+
+# Docker
+alias 'docker-start'='sudo service docker start'
+alias 'docker-stop'='sudo service docker stop'
+alias 'docker-rm'='docker rm $(docker ps -a -q)'
+alias 'docker-rmi'='docker rmi $(docker images -q)'
+alias 'docker-rmv'='docker volume rm $(docker volume ls -q)'
+
+# Zsh
+alias zsh='nano ~/.zshrc'
+alias reload='source ~/.zshrc'
+
+# Python
+alias python=python3
+alias py=python3
+alias ipy=ipython
+alias activate="source .venv/bin/activate"
+alias "pip-upgrade"="python3 -m pip install --upgrade pip"
+alias "install-ipykernel"="pip install ipykernel"
+alias "install-kernel"='python -m ipykernel install --user --name .venv --display-name "Python (.venv)"'
 
 # Compression
 compress() { tar -czf "${1%/}.tar.gz" "${1%/}"; }
