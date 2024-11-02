@@ -2,6 +2,7 @@ CHOICES=(
 	"Dev Language  Install programming language environment"
 	"Dev Database  Install development database in Docker"
 	"Bitwarden     Manage your passwords securely across devices"
+	"Discord       Messaging, voice and video client"
 	"Doom Emacs    Emacs framework with curated list of packages"
 	"OBS Studio    Record screencasts with inputs from both display + webcam"
 	"Ollama        Run LLMs, like Meta's Llama3, locally"
