@@ -32,3 +32,12 @@ if $RUNNING_GNOME; then
   gsettings set org.gnome.desktop.screensaver lock-enabled true
   gsettings set org.gnome.desktop.session idle-delay 300
 fi
+
+# Install dotfiles
+echo "Installing dotfiles..."
+source ~/.local/share/omakub/install/dotfiles.sh
+
+# Finish up
+echo ""
+echo "<<< Installation complete! >>>"
+echo ""
