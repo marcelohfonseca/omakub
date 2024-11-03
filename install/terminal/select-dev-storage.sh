@@ -3,7 +3,7 @@ if [[ -v OMAKUB_FIRST_RUN_DBS ]]; then
 	dbs=$OMAKUB_FIRST_RUN_DBS
 else
 	AVAILABLE_DBS=("SQLServer" "MySQL" "Redis" "PostgreSQL")
-	dbs=$(gum choose "${AVAILABLE_DBS[@]}" --no-limit --height 5 --header "Select databases (runs in Docker)")
+	dbs=$(gum choose "${AVAILABLE_DBS[@]}" --no-limit --height 10 --header "Select databases (runs in Docker)")
 fi
 
 if [[ -n "$dbs" ]]; then
