@@ -1,4 +1,4 @@
-OPTIONAL_APPS=("Bitwarden" "DBeaver" "Discord" "Gimp" "Microsoft365" "OBS-Studio" "Obsidian" "Spotify")
+OPTIONAL_APPS=("Bitwarden" "DBeaver" "Discord" "Gimp" "Jabref" "Microsoft365" "OBS-Studio" "Obsidian" "Spotify")
 DEFAULT_OPTIONAL_APPS='Bitwarden,Obsidian,Spotify'
 export OMAKUB_FIRST_RUN_OPTIONAL_APPS=$(gum choose "${OPTIONAL_APPS[@]}" --no-limit --selected $DEFAULT_OPTIONAL_APPS --height 10 --header "Select optional apps" | tr ' ' '-')
 
