@@ -1,4 +1,4 @@
-OPTIONAL_APPS=("cursor" "discord" "doom-emacs" "gimp" "jabref", "virtualbox")
+OPTIONAL_APPS=("cursor" "discord" "doom-emacs" "gimp" "jabref" "virtualbox")
 DEFAULT_OPTIONAL_APPS='doom-emacs,jabref,gimp'
 export OMAKUB_FIRST_RUN_OPTIONAL_APPS=$(gum choose "${OPTIONAL_APPS[@]}" --no-limit --selected $DEFAULT_OPTIONAL_APPS --height 10 --header "Select optional apps" | tr ' ' '-')
 
