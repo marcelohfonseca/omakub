@@ -1,1 +1,1 @@
-flatpak uninstall -y flathub org.gimp.GIMP
+flatpak uninstall -y org.gimp.GIMP

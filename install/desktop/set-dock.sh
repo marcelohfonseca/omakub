@@ -1,14 +1,14 @@
 # Favorite apps for dock
 apps=(
-	"google-chrome.desktop"
-	"md.obsidian.Obsidian.desktop"
-	"Alacritty.desktop"
-	"Neovim.desktop"
-	"code.desktop"
+	"app.zen_browser.zen"
+	"org.mozilla.firefox"
+	"WhatsApp.desktop"
+	"md.obsidian.Obsidian"
+	"com.bitwarden.desktop"
 	"spotify.desktop"
-	"Activity.desktop"
-	"Docker.desktop"
-	"Omakub.desktop"
+	"org.gnome.Terminal.desktop"
+	"code.desktop"
+	"io.dbeaver.DBeaverCommunity"
 	"org.gnome.Settings.desktop"
 	"org.gnome.Nautilus.desktop"
 )

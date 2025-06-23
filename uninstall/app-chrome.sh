@@ -1,1 +1,1 @@
-sudo apt remove -y google-chrome-stable
+flatpak uninstall -y com.google.Chrome

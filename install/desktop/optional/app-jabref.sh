@@ -1,1 +1,1 @@
-flatpak install flathub org.jabref.jabref
+flatpak install -y flathub org.jabref.jabref

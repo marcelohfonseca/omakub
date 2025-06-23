@@ -1,1 +1,1 @@
-flatpak uninstall -y flathub md.obsidian.Obsidian
+flatpak uninstall -y md.obsidian.Obsidian

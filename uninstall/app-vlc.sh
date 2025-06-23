@@ -1,1 +1,3 @@
-sudo apt remove -y vlc
+flatpak uninstall -y org.videolan.VLC
+
+

@@ -1,1 +1,1 @@
-sudo apt install -y texlive texlive-full
+sudo apt install -y texlive-full
