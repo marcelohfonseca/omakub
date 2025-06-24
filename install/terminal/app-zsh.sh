@@ -1,26 +1,51 @@
-# install Zsh
-# https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
-sudo apt install zsh -y
+#!/bin/bash
 
-# install Oh My Zsh
-# https://github.com/ohmyzsh/ohmyzsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+# Install Zsh if not already installed
+if ! command -v zsh >/dev/null 2>&1; then
+    echo "Installing Zsh..."
+    sudo apt install zsh -y
+else
+    echo "Zsh already installed."
+fi
 
-# install package "zsh-syntax-highlighting"
-# https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-# add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
+# Install Oh My Zsh if not already installed
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+    echo "Installing Oh My Zsh..."
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+else
+    echo "Oh My Zsh already installed."
+fi
 
-# install package "zsh-autosuggestions"
-# https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-# add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
+ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"
 
-# install package "zsh-z"
-git clone https://github.com/agkozak/zsh-z ~/.oh-my-zsh/custom/plugins/zsh-z
-# add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
+# Install zsh-syntax-highlighting if not already installed
+if [ ! -d "${ZSH_CUSTOM}/plugins/zsh-syntax-highlighting" ]; then
+    echo "Installing zsh-syntax-highlighting..."
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM}/plugins/zsh-syntax-highlighting"
+else
+    echo "zsh-syntax-highlighting already installed."
+fi
 
-# install theme powerlevel10k
-# https://github.com/romkatv/powerlevel10k#oh-my-zsh
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-# set ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc
+# Install zsh-autosuggestions if not already installed
+if [ ! -d "${ZSH_CUSTOM}/plugins/zsh-autosuggestions" ]; then
+    echo "Installing zsh-autosuggestions..."
+    git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM}/plugins/zsh-autosuggestions"
+else
+    echo "zsh-autosuggestions already installed."
+fi
+
+# Install zsh-z if not already installed
+if [ ! -d "${ZSH_CUSTOM}/plugins/zsh-z" ]; then
+    echo "Installing zsh-z..."
+    git clone https://github.com/agkozak/zsh-z "${ZSH_CUSTOM}/plugins/zsh-z"
+else
+    echo "zsh-z already installed."
+fi
+
+# Install Powerlevel10k theme if not already installed
+if [ ! -d "${ZSH_CUSTOM}/themes/powerlevel10k" ]; then
+    echo "Installing Powerlevel10k..."
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM}/themes/powerlevel10k"
+else
+    echo "Powerlevel10k already installed."
+fi
