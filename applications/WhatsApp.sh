@@ -3,11 +3,11 @@ cat <<EOF >~/.local/share/applications/WhatsApp.desktop
 Version=1.0
 Name=WhatsApp
 Comment=WhatsApp Messenger
-Exec=google-chrome --app="https://web.whatsapp.com" --name=WhatsApp --class=Whatsapp
+Exec=flatpak run com.google.Chrome --app="https://web.whatsapp.com" --name=WhatsApp --class=Whatsapp
 Terminal=false
 Type=Application
 Icon=/home/$USER/.local/share/omakub/applications/icons/WhatsApp.png
-Categories=GTK;
+Categories=Network;InstantMessaging;
 MimeType=text/html;text/xml;application/xhtml_xml;
 StartupNotify=true
 EOF
